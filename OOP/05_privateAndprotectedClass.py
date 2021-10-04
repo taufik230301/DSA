@@ -3,10 +3,12 @@ class Hero:
         self.nama = inputNama
         self.darah = inputDarah
         self.__kekuatan = inputKekuuatan
+        # protected Variable Bisa digunakan di class dan class turunanan nya
+        # Tapi protected tidak bisa diakses dari luar class atau dari luar class turunannya
         self._pertahanan = inputPertahanan
     
     def tambahDarah(self):
-        # Private Variable bisa digunakan di dalam class
+        # Private Variable hanya bisa digunakan di dalam class
         self.darah += self.__kekuatan + 5
         return self.darah
 
