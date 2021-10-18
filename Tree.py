@@ -1,4 +1,7 @@
 # Tree terdiri dari parent child, satu parent dapat memiliki banyak child
+# Buat atribut parent, untuk menyimpan data parent nya
+# Buat Atribut data, untuk menyimpan data dari tiap2 node
+# Buat Atribut Childer untuk menyimpan data child dari tiap2 node parent
 class Tree:
     def __init__(self, data):
         self.parent = None
@@ -24,6 +27,24 @@ class Tree:
             for child in self.children:
                 child.print_all()
 
+    def search(self, name):
+        if self.data == name:
+            print(self.data)
+        c = self.children
+        if c:
+            
+            for child in self.children:
+                if child.data == name:
+                    n = child
+                    str_1 = ""
+                    while n:
+                        str_1 = n.data +' / '+str_1
+                        n = n.parent
+                    print(str_1)
+                else:
+                    child.search(name)
+               
+
 root = Tree("Barang_elektronik")
 
 laptop = Tree("Laptop")
@@ -34,7 +55,13 @@ laptop.add_child(Tree("Apple"))
 mobil = Tree("Mobil")
 mobil.add_child(Tree("Suzuki"))
 mobil.add_child(Tree("Hyundai"))
-mobil.add_child(Tree("Yamaha"))
+
+yamaha = Tree("Yamaha")
+yamaha.add_child(Tree("Yamaha 1"))
+yamaha.add_child(Tree("Yamaha 2"))
+yamaha.add_child(Tree("Yamaha 3"))
+
+mobil.add_child(yamaha )
 
 
 
@@ -42,6 +69,9 @@ root.add_child(laptop)
 root.add_child(mobil)
 
 root.print_all()
+
+root.search("HP")
+
 
 
 

@@ -4,7 +4,7 @@ class Hero:
     # Class of Variable, atribute/variable yang ada pada class
     # digunakan untuk class dan objek itu sendiri
     jumlah = 0
-    # menggunakan method, method ini dibuat saat instansiasi sebuah objek
+    # menggunakan method init, method ini dibuat saat instansiasi sebuah objek
     def __init__(self, inputName, inputEnergy, inputHealth, inputArmor):
         # varibale instance of object, variable yang hanya ada pada objek
         self.name = inputName

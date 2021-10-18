@@ -27,3 +27,4 @@ print(nana.getNama())
 nana.nama = "nana1"
 print(nana.info)
 print(nana.armor)
+

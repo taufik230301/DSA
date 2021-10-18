@@ -22,6 +22,7 @@ print(hero1.darah)
 
 hero1._pertahanan = 90
 print(hero1.__dict__)
+
 # Tidak dapat mengakses Private Varible diluar class
 hero1.__kekuatan
 

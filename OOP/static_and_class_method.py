@@ -9,18 +9,20 @@ class Hero:
 
     # method ini hanya terikat pada objek
     def getJumlah(self):
-        return self.__jumlah
+        return self.nama
 
     # Method ini hanya terikat pada class
     def getJumlah3():
         return Hero.__jumlah
 
     # Method yng terikat pada objek dan class
+    # Tidak Perlu Menggunakan Properti Yang Ada pada Class
     @staticmethod
     def getJumlah1():
         return Hero.__jumlah
 
     # methof yang terikat pada class
+    # Bisa Menggunakan Properti Yng ada pada class
     @classmethod
     def getJumlah2(cls):
         return cls.__jumlah

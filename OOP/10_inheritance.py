@@ -28,8 +28,13 @@ print(yamaha.getNama())
 print(kendaraan.__dict__)
 
 # Akan mengembalikan Variable nama
-print(yamaha.getNama())
+print(kendaraan.getNama())
 
 # Tidak dapat mengembalikan variable nama karena private tidak dapat diakses dari luar maupun kelas turunan 
-print(yamaha.getNamaMobil())
+# # print(yamaha.getNamaMobil())
+print(yamaha.produksi)
+
+print(yamaha.__dict__)
+
+
 

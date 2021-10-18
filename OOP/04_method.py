@@ -40,4 +40,5 @@ print(10*"#")
 hero2.meneyerang(hero1)
 
 
+
     
