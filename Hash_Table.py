@@ -10,11 +10,16 @@ class Hash_Table:
             h += ord(i)
         return h % self.MAX
 
-    def add(self, key, value):
+    def __setitem__(self,key,value):
         h = self.get_hash(key)
         self.arr[h] = value
 
-t = Hash_Table()
-t.add('Maret 6', 100)
+    def __getitem__(self, key):
+        h = self.get_hash(key)
+        return self.arr[h]
 
+t = Hash_Table()
+t['Maret 6'] = 180
+t['Maret 17'] = 100
+print(t['Maret 6'])
 print(t.arr)
