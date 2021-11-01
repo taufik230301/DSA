@@ -71,8 +71,6 @@ class BinaryTree:
         if self.right:
             element += self.right.post_order()
 
-        
-
         return element
     
 
