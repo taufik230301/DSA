@@ -57,6 +57,23 @@ class BinaryTree:
         element.append(self.data)
 
         return element
+
+           # pre order root, left, right
+    def pre_order(self):
+        # Siapkan List Kosong
+        element = []
+
+        element.append(self.data)
+
+        if self.left:
+            element += self.left.post_order()
+        
+        if self.right:
+            element += self.right.post_order()
+
+        
+
+        return element
     
 
 def build_tree(element):
@@ -71,4 +88,5 @@ def build_tree(element):
 exercise = build_tree([3, 1, 7])
 
 print(exercise.inorder_traversal())
-print(exercise.post_order())
+print(exercise.post_order()) 
+print(exercise.pre_order())       
