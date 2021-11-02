@@ -73,6 +73,27 @@ class BinaryTree:
 
         return element
     
+    def search(self, val):
+        # Jika val sama dengan self.data, return True
+        if self.data == val:
+            return True
+
+        # Jika val kurang dari val, lanjut ke next self.left
+        if val < self.data:
+            if self.left:
+                return self.left.search(val)
+                # Jika tidak ada left, return False
+            else:
+                return False
+
+        # Jika val lebih dari val, lanjutkan ke next self.right
+        if val > self.data:
+            if self.right:
+                return self.right.search(val)
+                # Jika tidak ada right, return False
+            else:
+                return False
+
 
 def build_tree(element):
 
@@ -87,4 +108,5 @@ exercise = build_tree([3, 1, 7])
 
 print(exercise.inorder_traversal())
 print(exercise.post_order()) 
-print(exercise.pre_order())       
+print(exercise.pre_order())
+print(exercise.search(1))       
