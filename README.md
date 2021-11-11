@@ -17,6 +17,7 @@
 
 # SOLID
 - Single Responsbile Principle
+- Open/CLosed Principle
 
 # Algorithm
   # Sorting
