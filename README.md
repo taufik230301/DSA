@@ -14,3 +14,6 @@
 - initialize object from class
 - Method
 - Private And Protected class
+
+# SOLID
+- Single Responsbile Principle
